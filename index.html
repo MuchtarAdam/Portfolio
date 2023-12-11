@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/output.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- AOS -->
+    <title>Portfolio</title>
+</head>
+
+<body class="text-white font-Space">
+
+    <!-- Header -->
+    <nav class="relative bg-[#22282f]">
+        <div class="max-w-full px-2 mx-auto sm:px-6 lg:px-36">
+            <div class="relative flex items-center justify-between h-24">
+
+                <div class="relative cursor-pointer group">
+                    <div
+                        class="absolute inset-y-0 left-0 flex items-center transition-transform sm:justify-start group-hover:scale-105">
+                        <div class="flex items-center justify-between px-3 ">
+                            <img src="./asset/icons8-bash-240.png" alt="Logo"
+                                class="h-auto w-14 sm:w-16 sm:h-auto md:w-16">
+                            <div class="text-xl font-semibold transition-transform ms-2 sm:text-xl">Adam</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex items-center justify-end flex-1 sm:items-stretch">
+
+                    <div class="hidden sm:ml-6 md:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a onclick="scrollToHome()"
+                                class="px-3 py-2 font-sans text-xl font-normal text-white bg-gray-900 rounded-md cursor-pointer lg:px-5"
+                                aria-current="page">Portfolio</a>
+                            <a onclick="scrollToAbout()"
+                                class="px-3 py-2 font-sans text-xl font-normal text-gray-300 rounded-md cursor-pointer lg:px-5 hover:bg-gray-700 hover:text-white">About</a>
+                            <a onclick="scrollToProjects()"
+                                class="px-3 py-2 font-sans text-xl font-normal text-gray-300 rounded-md cursor-pointer lg:px-5 hover:bg-gray-700 hover:text-white">Projects</a>
+                            <a onclick="scrollToFooter()"
+                                class="px-3 py-2 font-sans text-xl font-normal text-gray-300 rounded-md cursor-pointer lg:px-5 hover:bg-gray-700 hover:text-white">Contact</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <!-- Mobile menu button-->
+                    <button type="button" id="hamburger"
+                        class="relative justify-center inline p-2 text-gray-400 rounded-md md:group-hover:w-32ems-center md:hidden hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                        Icon when menu is closed.
+
+                        Menu open: "hidden", Menu closed: "block"
+                        -->
+                        <img src="./asset/icons8-hamburger-menu-500.png" class="w-8 h-auto" alt="">
+                        <!--
+                        Icon when menu is open.
+
+                        Menu open: "block", Menu closed: "hidden"
+                        -->
+                        <svg class="hidden w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a onclick="scrollToHome()"
+                    class="block px-3 py-2 text-lg font-medium text-white bg-gray-900 rounded-md"
+                    aria-current="page">Portfolio</a>
+                <a onclick="scrollToAbout()"
+                    class="block px-3 py-2 text-lg font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">About</a>
+                <a onclick="scrollToProjects()"
+                    class="block px-3 py-2 text-lg font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">Projects</a>
+                <a onclick="scrollToFooter()"
+                    class="block px-3 py-2 text-lg font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">Contact</a>
+            </div>
+        </div>
+
+    </nav>
+    <!-- Header -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-20 md:pt-28 lg:pt-36 bg-[#1b1f24]">
+
+        <div
+            class="relative grid grid-cols-1 grid-rows-4 mx-5 gap-y-3 sm:mx-7 sm:grid sm:grid-cols-1 sm:grid-rows-4 md:grid md:grid-cols-2 md:grid-rows-2 lg:px-36">
+
+            <!-- Intro -->
+            <span class="z-10 sm:col-span-2 md:col-span-1" data-aos="fade-up" data-aos-duration="750"
+                data-aos-once="true">
+
+                <div class="h-1 mb-6 bg-white line w-24 sm:h-1.5 sm:mb-7 sm:w-40 md:h-2 md:mb-12"></div>
+
+                <h1
+                    class="max-w-md text-3xl font-semibold tracking-wide sm:text-4xl sm:font-extrabold sm:leading-tight sm:text-left md:text-5xl md:mb-12 lg:text-left lg:text-6xl lg:tracking-normal">
+                    I'm Muchtar Adam,
+                    Welcome to My
+                    Portfolio
+                </h1>
+
+                <p
+                    class="text-[#c3cad5] mt-3 max-w-xl leading-relaxed mb-6 text-justify sm:mb-7 sm:text-base md:text-lg">
+                    Hello guys, these are some of my projects that i have done. I have experience using some tools that
+                    relate to that interest such as Javascript, HTML
+                    CSS, etc. Besides that, i also participated in some competitions that related to business case and
+                    statistic poster.
+                </p>
+
+                <a onclick="scrollToAbout()" class="cursor-pointer">
+                    <div class="w-16 h-16 rounded-full bg-[#075fe4] flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white"
+                            class="mt-4 bi bi-arrow-down-short animate-bounce" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                        </svg>
+                    </div>
+                </a>
+
+            </span>
+            <!-- Intro -->
+
+            <!-- Container About & My Work -->
+            <div class="z-10 -mt-24 sm:mt-5 md:flex md:flex-nowrap md:col-span-1 md:mt-0" data-aos="fade-up"
+                data-aos-duration="750" data-aos-delay="100" data-aos-once="true">
+
+                <div class="flex flex-wrap sm:flex-nowrap sm:w-full md:flex-wrap md:justify-center">
+
+                    <!-- About -->
+                    <span class="w-full mb-4 sm:w-full sm:me-5 md:me-0 md:w-full md:ms-24">
+
+                        <div class="mb-4 font-sans text-base font-bold tracking-wide uppercase sm:text-base md:text-lg">
+                            about me
+                        </div>
+
+                        <p
+                            class="text-[#c3cad5] text-justify leading-relaxed sm:leading-relaxed mb-6 sm:text-base md:text-lg">
+                            As an undergraduate Information System student at Hasanuddin University, i have a big
+                            interest in front-end web and mobile development
+                        </p>
+
+                        <a onclick="scrollToAbout()" class="relative inline-block cursor-pointer group">
+                            <div class="flex items-center transition-all duration-300 group-hover:translate-x-3">
+
+                                <div class="text-lg uppercase sm:text-base md:text-lg">learn more</div>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                    stroke="white" stroke-width="1" class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                </svg>
+
+                            </div>
+
+                            <div
+                                class="line h-0.5 w-36 bg-[#5d6c83] mt-2 sm:h-px transition-all duration-300 group-hover:bg-white">
+                            </div>
+                        </a>
+
+
+                        <div class="line h-px w-full bg-[#5d6c83] my-10 opacity-25"></div>
+
+
+                    </span>
+                    <!-- About -->
+
+                    <!-- My Work -->
+                    <span class="w-full mb-4 sm:w-full md:w-full md:ms-24">
+
+                        <div class="mb-4 font-sans text-base font-bold tracking-wide uppercase sm:text-base md:text-lg">
+                            my work
+                        </div>
+
+                        <p
+                            class="text-[#c3cad5] text-justify mb-6 leading-relaxed sm:leading-relaxed sm:text-base md:text-lg">
+                            Explore my projects here and get a glimpse of the work I've done.
+                        </p>
+
+                        <a onclick="scrollToProjects()" class="relative inline-block cursor-pointer group">
+                            <div
+                                class="flex items-center transition-all duration-300 sm:mt-10 group-hover:translate-x-3">
+
+                                <div class="text-lg uppercase sm:text-base md:text-lg">browse project</div>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                    stroke="white" stroke-width="1" class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                </svg>
+
+                            </div>
+
+                            <div
+                                class="line h-0.5 w-48 bg-[#5d6c83] mt-2 me-15 sm:h-px transition-all duration-300 group-hover:bg-white">
+                            </div>
+
+                        </a>
+
+                        <div class="line h-px w-full bg-[#5d6c83] my-10 opacity-25"></div>
+
+                    </span>
+                    <!-- My Work -->
+
+                </div>
+            </div>
+            <!-- Container About & My Work -->
+
+            <!-- Follow Me -->
+            <span class="z-10 -mt-5 sm:col-span-2 md:col-span-1 md:col-start-2 md:row-start-2 md:ms-24"
+                data-aos="fade-up" data-aos-duration="750" data-aos-once="true">
+
+                <div class="mb-6 font-sans text-base font-bold tracking-wide uppercase sm:text-lg md:text-lg">
+                    follow me </div>
+
+                <div class="flex mt-5 group">
+
+                    <div class="duration-500 ease-in-out hover:-translate-y-2">
+
+                        <a href="https://www.instagram.com/muchtaradam_/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="33" height="33"
+                                viewBox="0,0,256,256" style="fill:#000000;" class="me-2">
+                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(5.12,5.12)">
+                                        <path
+                                            d="M16,3c-7.17,0 -13,5.83 -13,13v18c0,7.17 5.83,13 13,13h18c7.17,0 13,-5.83 13,-13v-18c0,-7.17 -5.83,-13 -13,-13zM37,11c1.1,0 2,0.9 2,2c0,1.1 -0.9,2 -2,2c-1.1,0 -2,-0.9 -2,-2c0,-1.1 0.9,-2 2,-2zM25,14c6.07,0 11,4.93 11,11c0,6.07 -4.93,11 -11,11c-6.07,0 -11,-4.93 -11,-11c0,-6.07 4.93,-11 11,-11zM25,16c-4.96,0 -9,4.04 -9,9c0,4.96 4.04,9 9,9c4.96,0 9,-4.04 9,-9c0,-4.96 -4.04,-9 -9,-9z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+
+
+
+                    </div>
+
+
+                    <div class="duration-500 ease-in-out hover:-translate-y-2">
+
+                        <a href="https://www.facebook.com/profile.php?id=61554363724697" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="mx-3 bi bi-facebook " viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="duration-500 ease-in-out hover:-translate-y-2">
+
+                        <a href="https://www.linkedin.com/in/muchtar-adam-37421a299/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="mx-3 bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="duration-500 ease-in-out hover:-translate-y-2">
+
+                        <a href="https://github.com/MuchtarAdam" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="mx-3 bi bi-github" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- Container Follow Me -->
+
+            </span>
+            <!-- Follow Me -->
+
+            <!-- Picture -->
+            <span class="sm:col-span-2 md:col-span-1 lg:relative lg:inset-x-96 lg:-inset-y-72 lg:bottom-0"
+                data-aos="fade-up" data-aos-duration="750" data-aos-delay="150" data-aos-once="true">
+
+                <div class="-mt-80 sm:-mt-56 md:-mt-48 lg:absolute">
+                    <img src="./asset/full-img.png" alt="Muchtar Adam"
+                        class="w-32 h-auto mx-auto sm:w-40 md:w-48 md:z-0 lg:w-56">
+                </div>
+
+            </span>
+            <!-- Picture -->
+
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="bg-[#22282f] py-20 -mt-96 sm:-mt-36 md:-mt-72 lg:-mt-96">
+
+        <div
+            class="grid grid-cols-1 grid-rows-2 mx-6 gap-y-10 sm:grid-cols-1 sm:grid-rows-1 md:grid-cols-2 md:gap-x-3 lg:py-28 lg:px-36 lg:gap-x-16">
+
+            <span class="w-full sm:col-span-1 md:col-span-1" data-aos="fade-up" data-aos-duration="750"
+                data-aos-once="true">
+                <div class="flex">
+                    <span class="text-lg font-semibold text-[#075fe4]">/</span>
+                    <div
+                        class="font-sans text-lg font-semibold tracking-wide uppercase ms-3 sm:text-base md:text-xl lg:font-bold lg:text-xl lg:mb-5">
+                        about me
+                    </div>
+                </div>
+
+                <div class="my-3 text-xl font-semibold sm:text-2xl lg:font-bold lg:text-5xl lg:mb-10">
+                    I've been developing website and mobile app since 2020
+                </div>
+
+                <div class="mb-3 text-base leading-relaxed text-[#c3cad5] lg:text-xl lg:text-justify">
+                    I've embarked on an intriguing journey in the realm of web and mobile development. In the early
+                    stages of my learning journey, I encountered challenges in problem-solving. However, as I took on
+                    tasks and engaged in various projects, I found that they became instrumental in honing my abilities.
+                </div>
+
+                <a class="relative inline-block cursor-pointer group">
+                    <div class="flex items-center transition-all duration-300 sm:mt-10 group-hover:translate-x-3">
+
+                        <div class="text-xl font-semibold sm:font-medium sm:text-2xl lg:font-semibold">
+                            More about me
+                        </div>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="white"
+                            stroke-width="1" class="bi bi-arrow-right ms-2 lg:w-9 lg:h-auto lg:mt-1"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+
+                    </div>
+
+                    <div
+                        class="line h-0.5 w-44 bg-[#5d6c83] mt-2 me-15 lg:h-1 transition-all duration-300 group-hover:bg-white">
+                    </div>
+                </a>
+
+            </span>
+
+
+            <div class="flex flex-wrap grid-rows-2 sm:grid gap-y-2 sm:gap-x-10 sm:grid-cols-2 sm:grid-rows-1"
+                data-aos="fade-up" data-aos-duration="750" data-aos-delay="250" data-aos-once="true">
+
+                <div class="flex w-full ">
+                    <div class="self-center text-4xl font-semibold me-3 lg:text-7xl">3</div>
+                    <div class="self-center text-lg font-medium lg:font-bold">
+                        Years studying programming
+                    </div>
+                </div>
+
+                <div class="flex w-full -mt-10 sm:mt-0">
+                    <div class="self-center text-4xl font-semibold me-3 lg:text-7xl">50</div>
+                    <div class="self-center text-lg font-medium lg:font-bold">Project</div>
+                </div>
+
+
+                <div
+                    class="text-base text-[#c3cad5] leading-relaxed sm:col-span-2 md:-mt-20 lg:text-xl lg:text-justify lg:-mt-44 2xl:-mt-32">
+                    Over the course of three years dedicated to learning programming, I have successfully completed
+                    several projects, showcasing my evolving skills and commitment to the craft.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="line h-0.5 bg-[#5d6c83] my-5 mx-5 sm:my-16 lg:mx-40" data-aos="zoom-in" data-aos-once="true"></div>
+
+        <div class="grid grid-cols-2 grid-rows-3 gap-3 sm:grid-cols-4 sm:grid-rows-2 lg:grid-cols-5 lg:grid-rows-1 lg:px-20"
+            data-aos="fade-up" data-aos-duration="750" data-aos-once="true">
+
+            <div
+                class="flex items-center justify-center col-span-2 text-xl tracking-wider uppercase sm:col-span-4 lg:col-span-1">
+                Apps that I use
+            </div>
+
+            <div class="flex items-center justify-center">
+                <img src="./asset/icons8-visual-studio-code-2019-400.png" alt="" class="w-12 h-12 sm:w-16 sm:h-16">
+                <div class="text-xl font-semibold ms-3">VS Code</div>
+            </div>
+
+            <div class="flex items-center justify-center">
+                <img src="./asset/icons8-android-studio-500.png" alt="" class="w-10 h-10 sm:w-14 sm:h-14">
+                <div class="text-xl font-semibold ms-3">Android</div>
+            </div>
+
+            <div class="flex items-center justify-center">
+                <img src="./asset/icons8-microsoft-edge-500.png" alt="" class="w-10 h-10 sm:w-14 sm:h-14">
+                <div class="text-xl font-semibold ms-3">Edge</div>
+            </div>
+
+            <div class="flex items-center justify-center">
+                <img src="./asset/icons8-unity-500.png" alt="" class="w-10 h-10 sm:w-14 sm:h-14">
+                <div class="text-xl font-semibold ms-3">Unity</div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- About Section End -->
+
+    <!-- Skills Section Start -->
+    <section id="tech" class="bg-[#1b1f24] py-20 lg:px-36">
+
+        <div class="flex px-5" data-aos="fade-right" data-aos-duration=" 750" data-aos-once="true">
+            <span class="text-lg font-semibold text-[#075fe4]">/</span>
+            <div
+                class="font-sans text-lg font-semibold tracking-wide uppercase ms-3 sm:text-base md:text-xl lg:font-bold lg:text-xl lg:mb-5">
+                My Skill
+            </div>
+        </div>
+
+        <div class="px-5 my-3 text-xl font-medium sm:text-2xl lg:font-bold lg:text-5xl lg:mb-10" data-aos="fade-right"
+            data-aos-duration=" 750" data-aos-delay="150" data-aos-once="true">
+            List of Skills
+        </div>
+
+        <div class="grid grid-cols-2 grid-rows-5 gap-3 px-5 sm:grid-cols-3 sm:grid-rows-3 md:grid-cols-4 md:grid-rows-3 md:p-6 lg:grid-cols-5 lg:grid-rows-2 "
+            data-aos="fade-left" data-aos-duration=" 1000" data-aos-delay="250" data-aos-once="true">
+
+            <div
+                class="group flex flex-col items-center justify-center rounded-lg bg-[#22282f] aspect-video sm:aspect-square md:aspect-video lg:aspect-square xl:aspect-video xl:p-5">
+
+                <div class="relative flex items-center justify-center">
+
+                    <div class="h-auto p-8 sm:p-10 md:p-7 lg:p-10 xl:p-12 bg-[#075fe4] rounded-full w-30"></div>
+                    <img src="./asset/card slider images/icons8-html-5-500.png" alt="img" draggable="false"
+                        class="absolute w-8 transition-all duration-300 sm:w-10 md:w-7 md:group-hover:w-14 lg:w-10 xl:w-12 ">
+
+                </div>
+
+                <div class="my-3 text-lg lg:text-xl xl:font-medium xl:tracking-wide">HTML & CSS</div>
+
+                <div class="w-16 h-1 transition-all duration-300 bg-white line md:group-hover:w-32"></div>
+
+            </div>
+
+            <div
+                class="group flex flex-col items-center justify-center rounded-lg bg-[#22282f] aspect-video sm:aspect-square md:aspect-video lg:aspect-square xl:aspect-video xl:p-5">
+
+                <div class="relative flex items-center justify-center">
+
+                    <div class="h-auto p-8 sm:p-10 md:p-7 lg:p-10 xl:p-12 bg-[#075fe4] rounded-full w-30 img"></div>
+                    <img src="./asset/card slider images/icons8-bootstrap-500.png" alt="img" draggable="false"
+                        class="absolute w-8 transition-all duration-300 sm:w-10 md:w-7 md:group-hover:w-14 lg:w-10 xl:w-12">
+
+                </div>
+
+                <div class="my-3 text-lg lg:text-xl xl:font-medium xl:tracking-wide">Boostrap</div>
+
+                <div class="w-16 h-1 transition-all duration-300 bg-white line md:group-hover:w-32"></div>
+
+            </div>
+
+            <div
+                class="group flex flex-col items-center justify-center bg-[#22282f] rounded-lg aspect-video sm:aspect-square md:aspect-video lg:aspect-square xl:aspect-video xl:p-5">
+
+                <div class="relative flex items-center justify-center">
+
+                    <div class="h-auto p-8 sm:p-10 md:p-7 lg:p-10 xl:p-12 bg-[#075fe4] rounded-full w-30 img"></div>
+                    <img src="./asset/card slider images/icons8-sql-100.png" alt="img" draggable="false"
+                        class="absolute w-8 transition-all duration-300 sm:w-10 md:w-7 md:group-hover:w-14 lg:w-10 xl:w-12">
+
+                </div>
+
+                <div class="my-3 text-lg lg:text-xl xl:font-medium xl:tracking-wide">SQL</div>
+
+                <div class="w-16 h-1 transition-all duration-300 bg-white line md:group-hover:w-32"></div>
+
+
+            </div>
+
+            <div
+                class="group flex flex-col items-center justify-center bg-[#22282f] rounded-lg aspect-video sm:aspect-square md:aspect-video lg:aspect-square xl:aspect-video xl:p-5">
+
+                <div class="relative flex items-center justify-center">
+
+                    <div class="h-auto p-8 sm:p-10 md:p-7 lg:p-10 xl:p-12 bg-[#075fe4] rounded-full w-30 img"></div>
+                    <img src="./asset/card slider images/icons8-javascript-500.png" alt="img" draggable="false"
+                        class="absolute w-8 transition-all duration-300 sm:w-10 md:w-7 md:group-hover:w-14 lg:w-10 xl:w-12">
+
+                </div>
+
+                <div class="my-3 text-lg lg:text-xl xl:font-medium xl:tracking-wide">Javascript</div>
+
+                <div class="w-16 h-1 transition-all duration-300 bg-white line md:group-hover:w-32"></div>
+
+            </div>
+
+            <div
+                class="group flex flex-col items-center justify-center rounded-lg bg-[#22282f] aspect-video sm:aspect-square md:aspect-video lg:aspect-square xl:aspect-video xl:p-5">
+
+                <div class="relative flex items-center justify-center">
+
+                    <div class="h-auto p-8 sm:p-10 md:p-7 lg:p-10 xl:p-12 bg-[#075fe4] rounded-full w-30 img"></div>
+                    <img src="./asset/card slider images/icons8-tailwind-css-96.png" alt="img" draggable="false"
+                        class="absolute w-8 transition-all duration-300 sm:w-10 md:w-7 md:group-hover:w-14 lg:w-10 xl:w-12">
+
+                </div>
+
+                <div class="my-3 text-lg lg:text-xl xl:font-medium xl:tracking-wide">Tailwind</div>
+
+                <div class="w-16 h-1 transition-all duration-300 bg-white line md:group-hover:w-32"></div>
+
+            </div>
+
+            <div
+                class="group flex flex-col items-center justify-center bg-[#22282f] rounded-lg aspect-video sm:aspect-square md:aspect-video lg:aspect-square xl:aspect-video xl:p-5">
+
+                <div class="relative flex items-center justify-center">
+
+                    <div class="h-auto p-8 sm:p-10 md:p-7 lg:p-10 xl:p-12 bg-[#075fe4] rounded-full w-30 img"></div>
+                    <img src="./asset/card slider images/icons8-api-90.png" alt="img" draggable="false"
+                        class="absolute w-8 transition-all duration-300 sm:w-10 md:w-7 md:group-hover:w-14 lg:w-10 xl:w-12">
+
+                </div>
+
+                <div class="my-3 text-lg lg:text-xl xl:font-medium xl:tracking-wide">REST</div>
+
+                <div class="w-16 h-1 transition-all duration-300 bg-white line md:group-hover:w-32"></div>
+
+            </div>
+
+            <div
+                class="group flex flex-col items-center justify-center rounded-lg bg-[#22282f] aspect-video sm:aspect-square md:aspect-video lg:aspect-square xl:aspect-video xl:p-5">
+
+                <div class="relative flex items-center justify-center">
+
+                    <div class="h-auto p-8 sm:p-10 md:p-7 lg:p-10 xl:p-12 bg-[#075fe4] rounded-full w-30 img"></div>
+                    <img src="./asset/card slider images/icons8-java-500.png" alt="img" draggable="false"
+                        class="absolute w-8 transition-all duration-300 sm:w-10 md:w-7 md:group-hover:w-14 lg:w-10 xl:w-12">
+
+                </div>
+
+                <div class="my-3 text-lg lg:text-xl xl:font-medium xl:tracking-wide">Java</div>
+
+                <div class="w-16 h-1 transition-all duration-300 bg-white line md:group-hover:w-32"></div>
+
+            </div>
+
+            <div
+                class="group flex flex-col items-center justify-center rounded-lg bg-[#22282f] aspect-video sm:aspect-square md:aspect-video lg:aspect-square xl:aspect-video xl:p-5">
+
+                <div class="relative flex items-center justify-center">
+
+                    <div class="h-auto p-8 sm:p-10 md:p-7 lg:p-10 xl:p-12 bg-[#075fe4] rounded-full w-30 img"></div>
+                    <img src="./asset/card slider images/icons8-flutter-500.png" alt="img" draggable="false"
+                        class="absolute w-8 transition-all duration-300 sm:w-10 md:w-7 md:group-hover:w-14 lg:w-10 xl:w-12">
+
+                </div>
+
+                <div class="my-3 text-lg lg:text-xl xl:font-medium xl:tracking-wide">Flutter</div>
+
+                <div class="w-16 h-1 transition-all duration-300 bg-white line md:group-hover:w-32"></div>
+
+            </div>
+
+            <div
+                class="group flex flex-col items-center justify-center rounded-lg bg-[#22282f] aspect-video sm:aspect-square md:aspect-video lg:aspect-square xl:aspect-video xl:p-5">
+
+                <div class="relative flex items-center justify-center">
+
+                    <div class="h-auto p-8 sm:p-10 md:p-7 lg:p-10 xl:p-12 bg-[#075fe4] rounded-full w-30 img"></div>
+                    <img src="./asset/card slider images/icons8-react-480.png" alt="img" draggable="false"
+                        class="absolute w-8 transition-all duration-300 sm:w-10 md:w-7 md:group-hover:w-14 lg:w-10 xl:w-12">
+
+                </div>
+
+                <div class="my-3 text-lg lg:text-xl xl:font-medium xl:tracking-wide">React JS</div>
+
+                <div class="w-16 h-1 transition-all duration-300 bg-white line md:group-hover:w-32"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Skills Section End -->
+
+    <!-- Project Section Start -->
+    <section id="projects" class="py-24 px-5 md:py-28 lg:py-48 lg:px-44 bg-[#22282f]">
+
+        <div class="grid grid-cols-1 grid-rows-2 md:gap-y-0 md:grid-cols-2 md:grid-rows-1 md:gap-x-14 md:mx-auto">
+
+            <div class="atas" data-aos="fade-up" data-aos-duration=" 1000" data-aos-delay="250" data-aos-once="true">
+
+                <div class="flex">
+                    <span class=" text-lg font-semibold text-[#075fe4]">/</span>
+                    <div
+                        class="font-sans text-lg font-bold tracking-wide uppercase ms-3 sm:text-base md:text-xl lg:font-bold lg:text-xl lg:mb-5">
+                        My Projects
+                    </div>
+                </div>
+
+                <div class="my-5 text-2xl font-semibold sm:text-2xl lg:font-bold lg:text-5xl ">
+                    Take a look at the latest projects I've done
+                </div>
+
+
+                <a href="https://github.com/MuchtarAdam" target="_blank" class="relative inline-block my-5 group">
+                    <div class="flex items-center transition-all duration-300 sm:mt-10 group-hover:translate-x-3">
+
+                        <div class="font-sans text-2xl font-semibold ">Browse all projects</div>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="white"
+                            stroke-width="1" class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+
+                    </div>
+
+                    <div
+                        class="line h-0.5 max-w-xl bg-[#5d6c83] mt-2 me-15 sm:h-1 transition-all duration-300 group-hover:bg-white">
+                    </div>
+
+                </a>
+
+
+                <a href="https://github.com/Mhmmdfhkri/cahaya-firman-website" target="_blank">
+                    <div
+                        class="card bg-[#2d343f] rounded-3xl mt-14 overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+                        <div class="p-2 lg:p-4">
+
+                            <div class="flex justify-end p-5">
+                                <div class="bg-[#5d6c83] rounded-lg text-center mx-5">
+                                    <div class="px-6 py-2 text-base font-semibold sm:text-lg">Boostrap</div>
+                                </div>
+                                <div class="bg-[#5d6c83] rounded-lg text-center">
+                                    <div class="px-6 py-2 text-base font-semibold sm:text-lg">Flask</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center ms-5">
+
+                                <img src="./asset/20230912_215035 1.png" alt=""
+                                    class="transition-transform duration-300">
+
+                                <div class="text-3xl transition-transform duration-300 ms-3 sm:text-4xl">Cahaya Firman
+                                </div>
+
+                            </div>
+
+                            <div class="mx-5 mt-4 text-xl font-semibold transition-transform duration-300 sm:text-2xl">
+                                Build Your Dreams with Us World-Class Building Materials
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="w-full h-full overflow-hidden transition-transform duration-300 transform bg-center hover:scale-110">
+                            <img src="./asset/Desain_tanpa_judul-removebg.png" alt="Image">
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="-mt-36 md:mt-0 bawah" data-aos="fade-up" data-aos-duration=" 1200" data-aos-delay="350"
+                data-aos-once="true">
+
+                <a href="https://github.com/MuchtarAdam/Pakinta2.0" target="_blank">
+                    <div
+                        class="card bg-[#2d343f] rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+                        <div class="p-2 lg:p-4">
+
+                            <div class="flex justify-end p-5">
+                                <div class="bg-[#5d6c83] rounded-lg text-center mx-5">
+                                    <div class="px-6 py-2 text-base font-semibold sm:text-lg">Java</div>
+                                </div>
+                                <div class="bg-[#5d6c83] rounded-lg text-center">
+                                    <div class="px-6 py-2 text-base font-semibold sm:text-lg">Figma</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center ms-5">
+
+                                <img src=".//asset/pakinta 2.0 revisi (1).png" alt=""
+                                    class="w-32 transition-transform duration-300 rounded-2xl">
+
+                                <div class="text-3xl transition-transform duration-300 ms-3 sm:text-4xl">Panggil Tukang
+                                    Kita
+                                </div>
+
+                            </div>
+
+                            <div class="mx-5 mt-4 text-xl font-semibold transition-transform duration-300 sm:text-2xl">
+                                Home Repairs Made Effortless Book Skilled Handyman in an Instant
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="w-full h-full overflow-hidden transition-transform duration-300 transform bg-center hover:scale-110">
+                            <img src="./asset/Desain tanpa judul (1).png" alt="Image">
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href="https://github.com/MuchtarAdam/Movie-App" target="_blank">
+                    <div
+                        class="card bg-[#2d343f] rounded-3xl mt-20 overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+                        <div class="p-2 lg:p-4">
+
+                            <div class="flex justify-end p-5">
+                                <div class="bg-[#5d6c83] rounded-lg text-center mx-5">
+                                    <div class="px-6 py-2 text-base font-semibold sm:text-lg">API</div>
+                                </div>
+                                <div class="bg-[#5d6c83] rounded-lg text-center">
+                                    <div class="px-6 py-2 text-base font-semibold sm:text-lg">Java</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center ms-5">
+
+                                <img src="./asset//Group 5.png" alt="" class="transition-transform duration-300">
+
+                                <div class="text-3xl transition-transform duration-300 ms-3 sm:text-4xl">Movie App</div>
+
+                            </div>
+
+                            <div class="mx-5 mt-4 text-xl font-semibold transition-transform duration-300 sm:text-2xl">
+                                Discover a worl of cinematic with our movie app
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="w-full h-full overflow-hidden transition-transform duration-300 transform bg-center hover:scale-110">
+                            <img src="./asset/Desain tanpa judul (2).png" alt="Image">
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Project Section End -->
+
+    <!-- Footer Section Start  -->
+    <section id="footer" class=" bg-[#1b1f24] border-t-2 border-[#5d6c83]">
+
+        <div
+            class="grid grid-cols-1 grid-rows-2 p-5 py-14 sm:py-20 md:py-20 lg:py-24 lg:px-32 sm:gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-5">
+
+            <div class="top-footer" data-aos="zoom-in" data-aos-duration="750" data-aos-once="true">
+
+                <div class="flex items-center justify-start mb-4">
+
+                    <div
+                        class="relative flex items-center justify-center h-full p-12 rounded-full bg-[#22282f] me-5 md:me-8 md:p-16">
+
+                        <img src="./asset/PP-removebg-preview-1.png" alt="Muchtar Adam"
+                            class="absolute w-20 h-auto overflow-hidden transition-transform transform rounded-full shadow-xl hover:scale-110 md:w-28">
+
+                    </div>
+
+
+                    <div class="title">
+                        <div class="text-xl font-semibold md:text-2xl lg:text-4xl">Muchtar Adam</div>
+                        <div class="text-lg font-medium text-[#717c8e] leading-snug my-3 sm:text-xl lg:text-2xl">
+                            Undergraduate Information System Student
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="grid w-48 grid-cols-4 grid-rows-1 mt-8 md:mt-10 lg:gap-x-14 group">
+
+                    <div class="duration-500 ease-in-out hover:-translate-y-2">
+                        <a href="https://www.instagram.com/muchtaradam_/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
+                                viewBox="0,0,256,256" class="md:w-8 md:h-auto" style="fill:#000000;">
+                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(5.12,5.12)">
+                                        <path
+                                            d="M16,3c-7.17,0 -13,5.83 -13,13v18c0,7.17 5.83,13 13,13h18c7.17,0 13,-5.83 13,-13v-18c0,-7.17 -5.83,-13 -13,-13zM37,11c1.1,0 2,0.9 2,2c0,1.1 -0.9,2 -2,2c-1.1,0 -2,-0.9 -2,-2c0,-1.1 0.9,-2 2,-2zM25,14c6.07,0 11,4.93 11,11c0,6.07 -4.93,11 -11,11c-6.07,0 -11,-4.93 -11,-11c0,-6.07 4.93,-11 11,-11zM25,16c-4.96,0 -9,4.04 -9,9c0,4.96 4.04,9 9,9c4.96,0 9,-4.04 9,-9c0,-4.96 -4.04,-9 -9,-9z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="duration-500 ease-in-out hover:-translate-y-2">
+                        <a href="https://www.facebook.com/profile.php?id=61554363724697" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-facebook md:w-8 md:h-auto" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="duration-500 ease-in-out hover:-translate-y-2">
+                        <a href="https://www.linkedin.com/in/muchtar-adam-37421a299/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-linkedin md:w-8 md:h-auto" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="duration-500 ease-in-out hover:-translate-y-2">
+
+                        <a href="https://github.com/MuchtarAdam" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-github md:w-8 md:h-auto" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                            </svg>
+                        </a>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 sm:gap-4" data-aos="zoom-in"
+                data-aos-duration="800" data-aos-once="true" data-aos-delay="150">
+
+                <div class="flex items-center sm:col-span-2 group">
+
+                    <div class="flex items-center transition-all duration-300 group-hover:translate-x-3">
+
+                        <div class="text-2xl font-medium md:text-4xl md:font-bold lg:text-5xl">Get in touch</div>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="blue"
+                            stroke-width="1" class="bi bi-arrow-right ms-2 md:w-9 md:h-auto md:ms-3"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+
+                    </div>
+
+                </div>
+
+                <div class="my-3 email group sm:my-0">
+
+                    <div class="text-sm font-semibold text-[#bdc5cf] uppercase mb-3 md:text-lg">Email me:</div>
+
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=VpCqJQvtZJThqwpcmXpCJtZdLFXvgLLCRXcqZgsVKxjhVWtZnlGNnQfqCPJZHLlClvfbvgv"
+                        target="_blank">
+
+                        <div class="flex items-center group">
+
+
+                            <div
+                                class="text-lg transition-all duration-300 group-hover:translate-x-2 md:text-xl lg:text-base 2xl:text-xl">
+                                muchtaradam2002@gmail.com
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="white"
+                                stroke-width="1"
+                                class="transition-all duration-300 bi bi-arrow-right ms-2 group-hover:translate-x-2"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                            </svg>
+
+
+
+                        </div>
+
+
+                        <div
+                            class="line h-0.5 max-w-xs bg-[#5d6c83] mt-2 sm:w-full lg:h-1 transition-all duration-300 group-hover:bg-white">
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="call group lg:ms-20">
+                    <div class="text-sm font-semibold text-[#bdc5cf] uppercase mb-3 md:text-xl">Contact me:</div>
+
+                    <a href="https://api.whatsapp.com/send?phone=085696925085" target="_blank">
+
+                        <div class="flex items-center group">
+
+                            <div
+                                class="text-lg transition-all duration-300 md:text-xl lg:text-base 2xl:text-xl group-hover:translate-x-2">
+                                085696925085</div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="white"
+                                stroke-width="1"
+                                class="transition-all duration-300 bi bi-arrow-right ms-2 md:w-7 md:h-auto group-hover:translate-x-2"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                            </svg>
+
+                        </div>
+
+
+
+                        <div
+                            class="line h-0.5 w-32 bg-[#5d6c83] mt-2 sm:w-40 lg:h-1 transition-all duration-300 group-hover:bg-white">
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="line h-px bg-[#5d6c83] mx-5 mb-5"></div>
+
+        <div class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-5">
+
+            <div class="flex flex-wrap items-center justify-between px-10 sm:px-28 md:px-40 lg:px-20">
+
+                <div class="text-lg cursor-pointer md:font-semibold" onclick="scrollToHome()">Portfolio</div>
+                <div class="text-lg cursor-pointer md:font-semibold" onclick="scrollToAbout()">About</div>
+                <div class="text-lg cursor-pointer md:font-semibold" onclick="scrollToProjects()">Projects</div>
+                <div class="text-lg cursor-pointer md:font-semibold" onclick="scrollToFooter()">Contact</div>
+
+            </div>
+            <div class="px-5 py-5 text-base text-center md:text-lg">
+                Copyright @muchtaradam | Design by Muchtar Adam - Powered by Tailwind, Youtube, and ChatGPT
+            </div>
+        </div>
+
+    </section>
+    <!-- Footer Section End  -->
+
+    <script src="dist/js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
